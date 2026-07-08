@@ -2,7 +2,7 @@ import Button from "../ui/Button";
 
 export default function Hero() {
   return (
-    <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-[#050505] text-white">
+    <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-[#050505] pt-24 md:pt-28 text-white">
       {/* Background Grid */}
       <div
         className="
