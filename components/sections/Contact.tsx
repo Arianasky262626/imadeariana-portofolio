@@ -1,4 +1,42 @@
+"use client";
+
+import { useState } from "react";
+
 export default function Contact() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+
+    if (!name || !email || !message) {
+      alert("Please complete all fields.");
+      return;
+    }
+
+    const text = `Halo Ariana,
+
+Saya tertarik menggunakan jasa Anda.
+
+Nama:
+${name}
+
+Email:
+${email}
+
+Pesan:
+${message}`;
+
+    const url = `https://wa.me/6287774230949?text=${encodeURIComponent(text)}`;
+
+    window.open(url, "_blank");
+
+    setName("");
+    setEmail("");
+    setMessage("");
+  }
+
   return (
     <section
       id="contact"
@@ -27,7 +65,7 @@ export default function Contact() {
 
         <div className="grid gap-12 lg:grid-cols-2">
 
-          {/* Left */}
+          {/* LEFT */}
 
           <div>
 
@@ -62,10 +100,12 @@ export default function Contact() {
                   Social
                 </p>
 
-                <div className="mt-4 flex gap-4">
+                <div className="mt-4 flex flex-wrap gap-4">
 
                   <a
                     href="https://github.com/arianasky262626"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="rounded-full border border-white/10 px-5 py-3 transition hover:border-lime-400 hover:text-lime-400"
                   >
                     GitHub
@@ -73,6 +113,8 @@ export default function Contact() {
 
                   <a
                     href="https://www.linkedin.com/in/i-made-ariana2025/"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="rounded-full border border-white/10 px-5 py-3 transition hover:border-lime-400 hover:text-lime-400"
                   >
                     LinkedIn
@@ -80,6 +122,8 @@ export default function Contact() {
 
                   <a
                     href="https://www.instagram.com/imadearianas/"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="rounded-full border border-white/10 px-5 py-3 transition hover:border-lime-400 hover:text-lime-400"
                   >
                     Instagram
@@ -93,29 +137,39 @@ export default function Contact() {
 
           </div>
 
-          {/* Right */}
+          {/* RIGHT */}
 
-          <form className="space-y-6">
+          <form
+            onSubmit={handleSubmit}
+            className="space-y-6"
+          >
 
             <input
               type="text"
               placeholder="Your Name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
               className="w-full rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl outline-none transition focus:border-lime-400"
             />
 
             <input
               type="email"
               placeholder="Email Address"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               className="w-full rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl outline-none transition focus:border-lime-400"
             />
 
             <textarea
               rows={6}
               placeholder="Tell me about your project..."
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
               className="w-full rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl outline-none transition focus:border-lime-400"
             />
 
             <button
+              type="submit"
               className="
                 rounded-full
                 bg-lime-400
