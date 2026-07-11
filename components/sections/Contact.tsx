@@ -65,21 +65,21 @@ export default function Contact() {
                 <div className="mt-4 flex gap-4">
 
                   <a
-                    href="#"
+                    href="https://github.com/arianasky262626"
                     className="rounded-full border border-white/10 px-5 py-3 transition hover:border-lime-400 hover:text-lime-400"
                   >
                     GitHub
                   </a>
 
                   <a
-                    href="#"
+                    href="https://www.linkedin.com/in/i-made-ariana2025/"
                     className="rounded-full border border-white/10 px-5 py-3 transition hover:border-lime-400 hover:text-lime-400"
                   >
                     LinkedIn
                   </a>
 
                   <a
-                    href="#"
+                    href="https://www.instagram.com/imadearianas/"
                     className="rounded-full border border-white/10 px-5 py-3 transition hover:border-lime-400 hover:text-lime-400"
                   >
                     Instagram

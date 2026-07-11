@@ -1,8 +1,8 @@
-import Button from "../ui/Button";
+import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-[#050505] pt-24 md:pt-28 text-white">
+    <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-[#050505] pt-24 text-white md:pt-28">
       {/* Background Grid */}
       <div
         className="
@@ -43,48 +43,67 @@ export default function Hero() {
         "
       />
 
-      {/* Overlay Gelap */}
+      {/* Overlay */}
       <div className="absolute inset-0 bg-black/30" />
 
       {/* Hero Content */}
       <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center px-6 text-center">
-        {/* Sub Heading */}
+        {/* Subtitle */}
         <p className="mb-6 text-sm uppercase tracking-[0.4em] text-lime-400">
-          Copywriter • Digital Product Designer • AI Anthusiast
+          Copywriter • Digital Marketer
         </p>
 
-        {/* Heading */}
+        {/* Title */}
         <h1 className="text-6xl font-extrabold leading-tight md:text-8xl">
-          I MADE
-          <br />
-          ARIANA
+          I MADE ARIANA
         </h1>
 
         {/* Description */}
         <p className="mx-auto mt-8 max-w-2xl text-lg leading-8 text-zinc-400">
-          I build modern digital products with Artificial Intelligence,
-          creative design, and cutting-edge web technology.
+          I build a solution for your business to grow and reach more customers through digital marketing and copywriting.
         </p>
 
-        {/* Button */}
+        {/* Buttons */}
         <div className="mt-10 flex flex-wrap justify-center gap-4">
-          <Button>View Projects</Button>
+          {/* View Projects */}
+          <Link
+            href="/#projects"
+            className="
+              rounded-full
+              bg-lime-400
+              px-8
+              py-4
+              font-semibold
+              text-black
+              transition-all
+              duration-300
+              hover:scale-105
+              hover:bg-lime-300
+            "
+          >
+            View Projects
+          </Link>
 
-          <button
+          {/* WhatsApp */}
+          <a
+            href="https://wa.me/6287774230949?text=Halo%20Ariana,%20saya%20tertarik%20dengan%20jasa%20website%20Anda."
+            target="_blank"
+            rel="noopener noreferrer"
             className="
               rounded-full
               border
               border-zinc-700
               px-8
               py-4
+              font-semibold
               transition-all
               duration-300
               hover:border-lime-400
               hover:text-lime-400
             "
           >
-            Contact Me
-          </button>
+            Let's Talk
+          </a>
         </div>
 
         {/* Scroll Indicator */}

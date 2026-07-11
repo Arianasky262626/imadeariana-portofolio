@@ -1,11 +1,12 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Project } from "@/data/project";
 
-interface ProjectscardProps {
+interface ProjectCardProps {
   project: Project;
 }
 
-export default function ProjectCard({ project }: ProjectscardProps) {
+export default function ProjectCard({ project }: ProjectCardProps) {
   return (
     <article
       className="
@@ -120,11 +121,11 @@ export default function ProjectCard({ project }: ProjectscardProps) {
           ))}
         </div>
 
-        {/* Button */}
-        <button
+        {/* View Case Study */}
+        <Link
+          href={`/projects/${project.slug}`}
           className="
-            mt-2
-            flex
+            inline-flex
             items-center
             gap-2
             font-semibold
@@ -135,9 +136,8 @@ export default function ProjectCard({ project }: ProjectscardProps) {
           "
         >
           View Case Study
-
           <span className="text-lg">→</span>
-        </button>
+        </Link>
       </div>
     </article>
   );
