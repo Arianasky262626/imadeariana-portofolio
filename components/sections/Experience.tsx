@@ -1,20 +1,20 @@
 const experiences = [
   {
-    year: "2026",
-    title: "AI Product Developer",
+    year: "2026-Now",
+    title: "Brand Strategist",
     company: "Personal Project",
     description:
-      "Building intelligent digital products using Artificial Intelligence, React, Next.js, and modern web technologies.",
+      "Brand strategist for a personal project focused on creating an AI-based educational platform that helps students understand learning concepts through interactive and ethical approaches. All digital marketing activities are data-driven, utilizing Instagram Insights analysis to identify content performance, audience behavior, optimal posting times, and trends that can enhance organic reach.",
   },
   {
     year: "2025",
     title: "Digital Marketing Project Manager",
-    company: "CV Bhumi Blambangan Sakti",
+    company: "PT Visiomedia Persada",
     description:
       "Led digital marketing strategies, content creation, and product branding while increasing online visibility and customer engagement.",
   },
   {
-    year: "2024",
+    year: "2023-Now",
     title: "Marketing Management Student",
     company: "Universitas Negeri Malang",
     description:
