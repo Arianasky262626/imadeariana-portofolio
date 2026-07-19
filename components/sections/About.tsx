@@ -7,6 +7,14 @@ export default function About() {
       id="about"
       className="relative overflow-hidden bg-[#050505] py-32 text-white"
     >
+      <div
+        className="
+          absolute
+          inset-0
+          bg-[linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)]
+          bg-[size:60px_60px]
+        "
+      />
       {/* Glow Background */}
       <div className="absolute left-0 top-20 h-[350px] w-[350px] rounded-full bg-lime-400/10 blur-[180px]" />
 

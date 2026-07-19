@@ -151,6 +151,14 @@ ${message}`;
               onChange={(e) => setName(e.target.value)}
               className="w-full rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl outline-none transition focus:border-lime-400"
             />
+            <div
+          className="
+          absolute
+          inset-0
+          bg-[linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)]
+          bg-[size:60px_60px]
+        "
+      />
 
             <input
               type="email"
